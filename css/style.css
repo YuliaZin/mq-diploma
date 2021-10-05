@@ -38,7 +38,7 @@
     z-index: 0;
   }
   
-  .header:after {
+  .header::after {
     content: " ";
     position: absolute;
     
@@ -113,10 +113,10 @@
   }
 
   .trends {
-  padding-top: 58px;
+    padding-top: 58px;
 }
 
-  .trends__title {
+  .title {
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
@@ -124,8 +124,8 @@
     text-align: center;
   }
 
-  .trends__title:after {
-    content: " "; 
+  .title:after {
+    content: ""; 
     display: block;
   
     margin-top: 8px;
@@ -138,25 +138,88 @@
   
 .body__trends {
     display: flex;
-    min-width: 1201px;
+    flex-wrap: wrap;
+    /* min-width: 1200px; */
     margin-top: 27px;
+    justify-content: space-between;
 }
 
-.trend {
+
+
+.trend1 {
+  background-image: url("../images/trend1.jpg");
   width: calc(25% - 3px);
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  
   position: relative;
+  
+  z-index: 0;
+  
+}
+.trend2 {
+  background-image: url("../images/trend2.jpg");
+  width: calc(25% - 3px);
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  
+  position: relative;
+  
+  z-index: 0;
+}
+.trend3 {
+  background-image: url("../images/trend3.jpg");
+  width: calc(25% - 3px);
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  
+  position: relative;
+  
+  z-index: 0;
+}
+.trend4 {
+  background-image: url("../images/trend4.jpg");
+  width: calc(25% - 3px);
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  
+  position: relative;
+  
+  z-index: 0;
 }
 
-.trend:nth-child(n+2) {
-  margin-left: 4px;
+
+.trend::after {
+  content: " ";
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  background-color: #000000;
+  opacity: 0.6;
+  
+  z-index: -1;
 }
 
-.trend__img {
+/* .trend__img {
   max-width: 100%;
   display: block;
 }
-
-
 
 .trend__imgbox::before {
   content: "";
@@ -166,11 +229,10 @@
 
   background-color: rgba(0, 0, 0, 0.6);
   
-  
   position: absolute;
   top: 0; 
   left: 0; 
-}
+} */
 
 .border__trend {
   
@@ -205,7 +267,7 @@
     text-decoration: none;
   }
   
-  a.title-preview__link {
+  a.title-preview__link, a.textshop_link {
     text-decoration: none;
   }
   
@@ -302,7 +364,7 @@
     margin-left: 13px;
   }
   
-  .preview__content {
+  .preview__content, .text__shop {
     font-size: 15px;
     color: #0f0d0e;
   }
@@ -527,6 +589,120 @@
     color: #b59f5b;
     font-weight: 700;
   }
+
+  .body__shops {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 27px;
+    padding: 0 15px 64px;
+    
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .shop__imgbox {
+    position: relative;
+    z-index: -1;
+    
+  }
+
+  .shop__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .border__shop {
+    position: relative;
+
+    box-sizing: border-box;
+    max-width: 348px;
+    min-height: 267px;
+    
+    padding: 52px 24px 24px;
+
+    margin-top: -31px;
+
+    border: 3px solid rgba(181, 159, 91, 0.6);
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .price-shop__box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+
+  .title__shop, .price__second {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+    line-height: 1.2;
+  }
+
+  .title__shop {
+    margin-bottom: -20px;
+  }
+  
+ 
+  
+  .textshop_link {
+    color: #b59f5b;
+  }
+
+  .textshop_link:hover {
+    text-decoration: underline;
+  }
+  
+  .price__first {
+    text-decoration: line-through;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+ 
+  .only_second {
+    margin-top: 15px;
+
+  }
+
+  .shop__link {
+    /* display: flex; */
+   
+
+    width: 140px;
+    height: 48px;
+    background-color: #b59f5b;
+    padding-top: 16px;
+    
+  }
+
+  .shop__link:hover {
+    background-color: #323232;
+  }
+
+  .shop__link_text {
+    display: block;
+    text-align: center; 
+    height: 100%;
+    
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    
+  }
+
+  
   
   .footer {
     width: 1200px;
@@ -598,4 +774,12 @@
     clip: rect(1px, 1px, 1px, 1px);
   } 
   
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .trend {
+      width: calc(50% - 3px);
+      height: calc(50% - 3px);
+      align-items: space-between;
+    }
+  }
   
