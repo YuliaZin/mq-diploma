@@ -144,64 +144,69 @@
     justify-content: space-between;
 }
 
-
+.trend {
+  min-height: 320px;
+  width: calc(25% - 3px);
+}
 
 .trend1 {
-  background-image: url("../images/trend1.jpg");
-  width: calc(25% - 3px);
+  background-image: url('../images/trend1.jpg');
+  /* height: 320px; */
   
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #000000;
   
-  position: relative;
+  /* position: relative;
   
   z-index: 0;
-  
+   */
 }
 .trend2 {
-  background-image: url("../images/trend2.jpg");
-  width: calc(25% - 3px);
-  
+ 
+  background-image: url('../images/trend2.jpg');
+  /* width: calc(25% - 3px);
+   */
+   height: 320px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #000000;
   
-  position: relative;
+  /* position: relative;
   
-  z-index: 0;
+  z-index: 0; */
 }
 .trend3 {
-  background-image: url("../images/trend3.jpg");
-  width: calc(25% - 3px);
-  
+  background-image: url('../images/trend3.jpg');
+  /* width: calc(25% - 3px); */
+  height: 320px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #000000;
   
-  position: relative;
+  /* position: relative;
   
-  z-index: 0;
+  z-index: 0; */
 }
 .trend4 {
-  background-image: url("../images/trend4.jpg");
-  width: calc(25% - 3px);
-  
+  background-image: url('../images/trend4.jpg');
+  /* width: calc(25% - 3px); */
+  height: 320px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #000000;
   
-  position: relative;
+  /* position: relative;
   
-  z-index: 0;
+  z-index: 0; */
 }
 
 
-.trend::after {
+/* .trend1:after {
   content: " ";
   position: absolute;
   
@@ -215,6 +220,48 @@
   
   z-index: -1;
 }
+.trend2:after {
+  content: " ";
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  background-color: #000000;
+  opacity: 0.6;
+  
+  z-index: -1;
+}
+.trend3:after {
+  content: " ";
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  background-color: #000000;
+  opacity: 0.6;
+  
+  z-index: -1;
+}
+.trend4:after {
+  content: " ";
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  background-color: #000000;
+  opacity: 0.6;
+  
+  z-index: -1;
+} */
 
 /* .trend__img {
   max-width: 100%;
@@ -243,9 +290,8 @@
 
   border: 3px solid rgba(181, 159, 91, 0.6);
 
-  position: absolute;
-  bottom: 16px;
-  left: 22px;
+  /* bottom: 16px;
+  left: 22px; */
 
   display: flex;
   flex-wrap: wrap;
