@@ -16,6 +16,9 @@
             </a>
             
             <nav class="menu">
+              <button class="menu__button js-menu__button">
+                <span class="menu__button-label">открыть меню</span>
+              </button>
               <ul class="menu-list">
                 <li class="menu-list-item">
                   <a class="menu-link" href="#home">Главная</a>
@@ -45,15 +48,13 @@
         </div>
     </header>
      
-    <div class="trends">
+    <section class="trends">
         <h2 class="title trends__title">сейчас в тренде</h2>    
 
         <div class="body__trends">
             
             <article class="trend trend_1">
-              <!-- <div class="trend__imgbox">
-                <img src="images\trend1.jpg" class="trend__img" alt="Цветы">
-              </div> -->
+              
                 <div class="border__trend">
                     <ul class="preview__tegs-list tegs__trend">
                         <li class="preview__tegs-item">
@@ -68,12 +69,10 @@
                       <a class="title-preview__link title__trend_link" href="#">Сейчас в тренде: сад на подоконнике</a>
                     </h2>
                 </div> 
-              </article>
+            </article>
             
-              <article class="trend trend_2">
-                <!-- <div class="trend__imgbox">
-                  <img src="images\trend2.jpg" class="trend__img" alt="Цветы">
-                </div> -->
+            <article class="trend trend_2">
+                
                 <div class="border__trend">
                     <ul class="preview__tegs-list">
                         <li class="preview__tegs-item">
@@ -86,12 +85,10 @@
                         картинках из интернета: какие они на вкус?</a>
                     </h2>
                 </div>
-              </article> 
+            </article> 
 
             <article class="trend trend_3">
-                <!-- <div class="trend__imgbox">
-                  <img src="images\trend3.jpg" class="trend__img" alt="Цветы">
-                </div> -->
+                
                 <div class="border__trend">
                     <ul class="preview__tegs-list">
                         <li class="preview__tegs-item">
@@ -108,12 +105,10 @@
                     </a>
                     </h2>
                 </div>
-             </article> 
+            </article> 
 
-             <article class="trend trend_4">
-              <!-- <div class="trend__imgbox">
-                <img src="images\trend4.jpg" class="trend__img" alt="Цветы">
-              </div> -->
+            <article class="trend trend_4">
+              
                 <div class="border__trend">
 
                     <ul class="preview__tegs-list">
@@ -131,9 +126,9 @@
                       </a>
                     </h2>
                 </div> 
-             </article>     
-         </div>      
-    </div>
+            </article>     
+        </div>      
+    </section>
 
       <div class="wrap">
         <main class="previews">
@@ -142,7 +137,7 @@
             <div class="preview__box-img">
               <img class="preview__img" width="381" src="images/last-post1.jpg" alt="Мужчина на море">
             </div>
-            <div class="preview__info">
+            <div class="preview__info preview__line">
                <ul class="preview__tegs-list">
                  <li class="preview__tegs-item">
                    <a class="preview__tegs" href="#">travel</a>
@@ -172,7 +167,7 @@
             <div class="preview__box-img">
               <img class="preview__img" width="381" src="images/last-post2.jpg" alt="Йога на берегу">
             </div>
-            <div class="preview__info">
+            <div class="preview__info preview__line">
                <ul class="preview__tegs-list">
                  <li class="preview__tegs-item">
                    <a class="preview__tegs" href="#">health</a>
@@ -201,7 +196,7 @@
             <div class="preview__box-img">
               <img class="preview__img" width="381" src="images/last-post3.jpg" alt="Фестиваль">
             </div>
-            <div class="preview__info">
+            <div class="preview__info preview__line">
                <ul class="preview__tegs-list">
                  <li class="preview__tegs-item">
                    <a class="preview__tegs" href="#">music</a>
@@ -231,7 +226,7 @@
             <div class="preview__box-img">
               <img class="preview__img" width="381" src="images/last-post4.jpg" alt="Стол с едой">
             </div>
-            <div class="preview__info">
+            <div class="preview__info preview__line">
                <ul class="preview__tegs-list">
                  <li class="preview__tegs-item">
                    <a class="preview__tegs" href="#">lifestyle</a>
@@ -293,7 +288,7 @@
       
       
         <aside class="aside">
-          <section class="section__preview">
+          <section class="section__preview section__aside">
             <h3 class="aside__title aside__title-preview">Новые посты</h3>
       
             <article class="aside__preview">
@@ -368,7 +363,7 @@
               <span class="hidden">Кнопка поиска</span>
             </form>
        
-          <section class="section__subscribe">
+          <section class="section__subscribe section__aside">
             <h3 class="aside__title aside__title-form">Рассылка</h3>
       
             <div class="subscribe_box">
@@ -384,7 +379,7 @@
           </section>
           
             
-          <section class="section__tegs">
+          <section class="section__tegs section__aside">
             <h3 class="aside__title aside__title-tegs">Теги</h3>
       
              <div class="aside__tegs_box">
@@ -417,7 +412,7 @@
              </div>
             </section>
       
-          <section class="section__categories">
+          <section class="section__categories section__aside">
             <h3 class="aside__title aside__title-topic">Темы</h3>
             <ul class="categories__box">
               <li class="categoria">
@@ -574,7 +569,40 @@
       
       </footer>
       
-      
+      <div class="popup">
+        <div class="popup__container">
+          <div class="sign-up">
+            <header class="sign-up__header">
+              <h3 class="sign-up__title">ваш фидбек</h3> 
+            </header>
+            <div class="sign-up__content">
+              <form class="sign-up__form">
+                
+                  <div class="sign-up__column">
+                    <label class="sign-up__label" for="username">Как часто вы заходите на сайт?</label>
+                    <input id="username" class="sign-up__field sign-up__field_username" placeholder="Почти каждый день" name="username" required> 
+                  </div>
+                           
+                  <div class="sign-up__column">
+                    <label class="sign-up__label" for="password">Вы подписаны на e-mail рассылку?</label>
+                    <input id="password" class="sign-up__field sign-up__field_password" placeholder="Может, больше рецептов?" name="password" required> 
+                  </div>
+                
+                  <div class="sign-up__column">
+                    <label class="sign-up__label" for="password">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+                    <input id="password" class="sign-up__field sign-up__field_password"  placeholder="Может, больше рецептов?" name="password" required> 
+                  </div>
+                  
+                
+                <div class="sign-up__column">
+                  <button class="sign-up__button"><span class="sign-up__button-label">Отправить</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <button class="popup__close" type="button">Закрыть окно</button>
+        </div>
+      </div>
       
           
 </body>
