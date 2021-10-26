@@ -135,7 +135,7 @@
       
           <article class="preview">
             <div class="preview__box-img">
-              <img class="preview__img" width="381" src="images/last-post1.jpg" alt="Мужчина на море">
+              <img class="preview__img" src="images/last-post1.jpg" alt="Мужчина на море">
             </div>
             <div class="preview__info preview__line">
                <ul class="preview__tegs-list">
@@ -571,39 +571,60 @@
       
       <div class="popup">
         <div class="popup__container">
+          <div class="button_x">
+            <button class="popup__close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 441 441"></svg>
+            <span class="hidden">Закрыть окно</span>
+            </button>
+          </div>
+          </button>
           <div class="sign-up">
             <header class="sign-up__header">
-              <h3 class="sign-up__title">ваш фидбек</h3> 
+              <h2 class="title shops__title">ваш фидбек</h2> 
             </header>
             <div class="sign-up__content">
               <form class="sign-up__form">
                 
                   <div class="sign-up__column">
-                    <label class="sign-up__label" for="username">Как часто вы заходите на сайт?</label>
-                    <input id="username" class="sign-up__field sign-up__field_username" placeholder="Почти каждый день" name="username" required> 
+                    <label class="sign-up__label">
+                      <span class="field-label">Как часто вы заходите на сайт?</span>
+                      <select type="text" class="field select" placeholder="Почти каждый день" required> 
+                        <option selected>Почти каждый день</option>
+                        <option>Редко</option>
+                      </select> 
+                    </label>
                   </div>
                            
                   <div class="sign-up__column">
-                    <label class="sign-up__label" for="password">Вы подписаны на e-mail рассылку?</label>
-                    <input id="password" class="sign-up__field sign-up__field_password" placeholder="Может, больше рецептов?" name="password" required> 
+                    <label class="sign-up__label">
+                      <span class="field-label">Вы подписаны на e-mail рассылку?</span>
+
+                      <input type="radio" name="sign-up" id="yes" class="radio_button hidden" required> 
+                      <label for="yes" class="field-label_radio">Да</label>
+                      <span class="circle hidden">circle</span>
+
+                      <input type="radio" name="sign-up" id="no" class="radio_button hidden" required> 
+                      <label for="no" class="field-label_radio radio__no">Нет</label>
+                      <span class="circle hidden">circle</span>
+                    </label>
                   </div>
                 
                   <div class="sign-up__column">
-                    <label class="sign-up__label" for="password">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
-                    <input id="password" class="sign-up__field sign-up__field_password"  placeholder="Может, больше рецептов?" name="password" required> 
+                    <label class="field-label" for="recipe">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+                    <textarea id="recipe" class="field field_recipes"  placeholder="Может, больше рецептов?" required></textarea>
                   </div>
                   
                 
                 <div class="sign-up__column">
-                  <button class="sign-up__button"><span class="sign-up__button-label">Отправить</span></button>
+                  <button class="feedback__button"><span class="feedback__button-label">Отправить</span></button>
                 </div>
               </form>
             </div>
           </div>
-          <button class="popup__close" type="button">Закрыть окно</button>
         </div>
       </div>
       
           
 </body>
 </html>
+
