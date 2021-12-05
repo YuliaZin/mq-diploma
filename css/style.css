@@ -268,12 +268,14 @@
   }
   
   .previews {
-    max-width: 778px;
+    flex: 1;
+    margin-right: 126px;
+    /* max-width: 778px; */
   }
   
   .preview {
     display: flex;
-    flex-wrap: wrap;
+    
   }
   
   .preview:nth-child(n+2) {
@@ -286,7 +288,6 @@
   
   .preview__info {
     margin-left: 30px;
-    max-width: 367px;
   }
   
   .preview__tegs-list {
@@ -592,6 +593,7 @@
  }
 
   .shop__img {
+    max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -603,6 +605,8 @@
     box-sizing: border-box;
     max-width: 348px;
     min-height: 267px;
+    margin-left: auto;
+    margin-right: auto;
     
     padding: 52px 24px 24px;
 
@@ -769,14 +773,21 @@
   
   height: 100%;
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .popup__container {
-  opacity: 1;
   
-  position: fixed;
-  top: 100px;
-  left: 34%;
+  position: relative;
+
+  background-color: white;
+  width: 390px;
+  
+  padding: 51px 29px 55px;
+ 
 }
 
 .field-label {
@@ -821,20 +832,17 @@
 }
 
 .button_x {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: -26px;
+  width: 18px;
+  height: 18px;
+  
   background-image: url("../svg/form-x.svg");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 18px auto;
+ 
   margin-bottom: 8px;
-}
-
-.sign-up {
-  background-color: white;
-  width: 390px;
-  min-height: 589px;
-  padding: 51px 29px 55px;
 }
 
 .sign-up__column {
@@ -916,9 +924,8 @@
   .previews {
     margin-right: 35px;
   }
-
-  .preview__box-img {
-    max-width: 100%;
+  .preview {
+    display: block;
   }
 
   .preview__tegs-item {
@@ -935,7 +942,7 @@
   }
   .preview__info {
     margin-left: 0px;
-    max-width: 100%;
+    
   }
   .date-author__list {
     margin-bottom: 32px;
@@ -999,17 +1006,62 @@
   .menu-list {
     display: none;
   }
+
+  .button_x {
+    top: -36px;
+    width: 26px;
+    height: 26px;
+   
+  }
+  
 }
 
 
 
 @media screen and (orientation: portrait) and (min-width: 641px) and (max-width: 1200px) {
+  .box {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
   .trend {
     width: calc(50% - 2px);
   }
   .trend:nth-child(n+3) {
     margin-top: 3px;
   }
+  .previews {
+    margin-right: 35px;
+  }
+  .preview {
+    display: block;
+  }
+  .preview, .preview__img {
+    max-width: 100%;
+  }
+  .preview:nth-child(n+2) {
+    margin-top: 41px;
+  }
+  .wrap {
+    padding: 50px 35px;
+  }
+  .preview__box-img {
+  max-width: 100%;
+  padding-bottom: 14px;
+  }
+  .preview__info {
+    margin-left: 0px;
+  }
+  
+  .preview__line::after {
+    content: ""; 
+    display: block;
+    margin-top: 21px;
+    max-width: 100%;
+    height: 3px;
+  
+    margin-right: auto;
+    background: #eeeeee;
+    }
 
   .body__shops {
     width: 91%;
@@ -1068,7 +1120,16 @@
   .menu-list {
     display: none;
   }
-
+  .border__shop {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button_x {
+    top: -36px;
+    width: 26px;
+    height: 26px;
+   
+  }
 }
 
 
@@ -1143,7 +1204,7 @@
   }
   .previews {
   margin-right: 0;
-  max-width: 100%;
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1172,7 +1233,7 @@
   }
   .preview__info {
   margin-left: 0px;
-  max-width: 100%;
+  
   }
   .date-author__list {
   margin-bottom: 17px;
@@ -1254,6 +1315,8 @@
   }
   .border__shop {
     min-height: 60px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .shop {
     max-width: 100%;
@@ -1313,19 +1376,6 @@
   .copyright {
     margin-top: 48px;
   }
-  .sign-up {
-    background-color: white;
-    width: 94vw;
-    min-height: 90vh;
-    padding: 28px 25px 30px;
-  }
-  .popup__container {
-    opacity: 1;
-    
-    position: fixed;
-    top: 3.8%;
-    left: 3%;
-  }
 
   .field-label {
     display: block;
@@ -1344,11 +1394,7 @@
     min-height: 20vh;
   }
 
-  .button_x {
-    
-    background-size: 18px auto;
-    margin-bottom: 8px;
-  }
+ 
   .sign-up__column {
     margin-top: 4vh;
   }
@@ -1358,6 +1404,21 @@
     color: #0f0d0e;
     font-weight: 400;
   }
+
+  .popup__container {
+    position: relative;
+    width: 330px;
+    padding: 28px 26px 30px;
+  }
+    
+  .button_x {
+    position: absolute;
+    right: 0;
+    top: -32px;
+    width: 26px;
+    height: 26px;
+  }
+  
 }
 
 
